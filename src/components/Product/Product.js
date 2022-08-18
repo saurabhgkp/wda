@@ -37,8 +37,8 @@ const Product = () => {
                                         <div class="product-image">
                                             <a href="single-product.html"><img src={data[item].Image} alt="" /></a>
                                         </div>
-                                        <h3>Strawberry</h3>
-                                        <p class="product-price"><span>Per Kg</span> 85$ </p>
+                                        <h3>{data[item].Name}</h3>
+                                        <p class="product-price">{data[item].Title} </p>
                                         <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                                     </div>
                                 </div>
