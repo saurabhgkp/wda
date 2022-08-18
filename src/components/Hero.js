@@ -55,38 +55,25 @@ const Hero = () => {
 
                         <div class="image-column col-lg-6">
                             <div class="image">
-                                <div class="price-box">
-                                    <div class="inner-price">
-                                        <span class="price">
-                                            <strong>30%</strong> <br /> off per kg
-                                        </span>
-                                    </div>
-                                </div>
-                                <img src="assets/img/a.jpg" alt="" />
+
+                                <img className='img-fluid' src="assets/img/gamming.jpg" alt="" />
                             </div>
                         </div>
 
                         <div class="content-column col-lg-6">
-                            <h3><span class="orange-text">Deal</span> of the month</h3>
-                            <h4>Hikan Strwaberry</h4>
-                            <div class="text">Quisquam minus maiores repudiandae nobis, minima saepe id, fugit ullam similique!
-                                Beatae, minima quisquam molestias facere ea. Perspiciatis unde omnis iste natus error sit
-                                voluptatem accusant</div>
+                            <h3><span class="orange-text">1080 P</span> Normal Setting </h3>
+                            <h4>60 FPS Approx </h4>
+                            <div class="text">Powerfull Gaming CPU Grand Theft Auto V </div>
 
                             <div class="time-counter">
                                 <div class="time-countdown clearfix" data-countdown="2020/2/01">
                                     <div class="counter-column">
-                                        <div class="inner"><span class="count">00</span>Days</div>
+                                        <div class="inner"><span class="count">1080 P</span> Normal Setting</div>
                                     </div>
                                     <div class="counter-column">
-                                        <div class="inner"><span class="count">00</span>Hours</div>
+                                        <div class="inner"><span class="count">60 FPS</span>Approx </div>
                                     </div>
-                                    <div class="counter-column">
-                                        <div class="inner"><span class="count">00</span>Mins</div>
-                                    </div>
-                                    <div class="counter-column">
-                                        <div class="inner"><span class="count">00</span>Secs</div>
-                                    </div>
+
                                 </div>
                             </div>
                             <a href="cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
