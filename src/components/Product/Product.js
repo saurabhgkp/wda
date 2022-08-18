@@ -39,6 +39,8 @@ const Product = () => {
                                         </div>
                                         <h3>{data[item].Name}</h3>
                                         <p class="product-price">{data[item].Title} </p>
+                                        <h4 class="product-price">₹{data[item].Price} <del
+                                            class="product-old-price">₹{data[item].OldPrice}</del></h4>
                                         <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
                                     </div>
                                 </div>
