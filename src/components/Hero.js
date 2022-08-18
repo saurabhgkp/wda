@@ -16,7 +16,7 @@ const Hero = () => {
                                 </div>
                                 <div class="content">
                                     <h3>Free Shipping</h3>
-                                    <p>When order over $75</p>
+                                    <p>With In 7 Days</p>
                                 </div>
                             </div>
                         </div>
@@ -37,8 +37,8 @@ const Hero = () => {
                                     <i class="fas fa-sync"></i>
                                 </div>
                                 <div class="content">
-                                    <h3>Refund</h3>
-                                    <p>Get refund within 3 days!</p>
+                                    <h3>Replacement</h3>
+                                    <p> Guarantee 1 Year</p>
                                 </div>
                             </div>
                         </div>
