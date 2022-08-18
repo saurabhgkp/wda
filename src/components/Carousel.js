@@ -6,23 +6,36 @@ const Carousel = () => {
             <div class="logo-carousel-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="logo-carousel-inner">
-                                <div class="single-logo-item">
-                                    <img src="assets/img/company-logos/1.png" alt="" />
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                            <div class="list-box d-flex align-items-center">
+                                <div class="list-icon">
+                                    <img src="assets/img/company-logos/logo1.png" alt="" />
                                 </div>
-                                <div class="single-logo-item">
-                                    <img src="assets/img/company-logos/2.png" alt="" />
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                            <div class="list-box d-flex align-items-center">
+                                <div class="list-icon">
+                                    <img src="assets/img/company-logos/logo2.png" alt="" />
                                 </div>
-                                <div class="single-logo-item">
-                                    <img src="assets/img/company-logos/3.png" alt="" />
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="list-box d-flex justify-content-start align-items-center">
+                                <div class="list-icon">
+                                    <img src="assets/img/company-logos/logo3.png" alt="" />
                                 </div>
-                                <div class="single-logo-item">
-                                    <img src="assets/img/company-logos/4.png" alt="" />
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="list-box d-flex justify-content-start align-items-center">
+                                <div class="list-icon">
+                                    <img src="assets/img/company-logos/logo4.png" alt="" />
                                 </div>
-                                <div class="single-logo-item">
-                                    <img src="assets/img/company-logos/5.png" alt="" />
-                                </div>
+
                             </div>
                         </div>
                     </div>
