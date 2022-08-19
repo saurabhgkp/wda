@@ -28,7 +28,7 @@ function App() {
           <Route element={<Review />} />
         </Route >
         <Route path="/Cart" element={<Cart />} />
-        <Route path="/Checkout" element={<Checkout />} />
+        <Route path="/Checkout/:id" element={<Checkout />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
 
