@@ -1,5 +1,6 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+
 const SingleProduct = () => {
 
     const { id } = useParams("");
@@ -8,17 +9,29 @@ const SingleProduct = () => {
         fetch(`https://pcology-api.herokuapp.com/googleSheet/getDataById/${id}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
-                setData(data.Data);
+                // console.log(data);
+                setData(data);
             });
     }, []);
+    console.log("===", data);
     return (
         <div><div class="single-product mt-150 mb-150">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <div class="single-product-img">
-                            <img src="assets/img/products/product-img-5.jpg" alt="" />
+                        <div class="">
+                            <div class="">
+
+                                <a href="single-product.html"><img src={data[0].Image} alt="" /></a>
+
+                                <h3>{data[0].Name}</h3>
+                                <p class="product-price">{data[0].Title} </p>
+                                <h4 class="product-price">₹{data[0].Price} <del
+                                    class="product-old-price">₹{data[0].OldPrice}</del></h4>
+                                <Link  //</div> to={`SingleProduct/${data[0].id}`}
+                                >
+                                    <a class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a></Link>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-7">
