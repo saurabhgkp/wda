@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Banner = () => {
+const Discount = () => {
     return (
         <div>	<section class="shop-banner">
             <div class="container">
@@ -89,4 +89,4 @@ const Banner = () => {
     )
 }
 
-export default Banner
+export default Discount

@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from './Product/Product'
+import Review from './Review'
 
 const Hero = () => {
     return (
@@ -39,7 +40,9 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-            </section></div>
+            </section>
+            <Review />
+        </div>
     )
 }
 
