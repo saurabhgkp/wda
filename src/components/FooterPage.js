@@ -16,9 +16,9 @@ const FooterPage = () => {
                         <div class="footer-box get-in-touch">
                             <h2 class="widget-title">Get in Touch</h2>
                             <ul>
-                                <li>sigdi gas godam Ke Piche,Kunraghat, gorakhpur</li>
+                                <li>Near Ashoka Gas Godam Singhariya,Kunraghat, Gorakhpur</li>
                                 <li>pcologyofficial@gmail.com</li>
-                                <li>+00 111 222 3333</li>
+                                <li>+91 6393647326</li>
                             </ul>
                         </div>
                     </div>

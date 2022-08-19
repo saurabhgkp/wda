@@ -2112,7 +2112,7 @@ a.video-play-btn {
 }
 
 .abt-bg {
-  background-image: url(../img/abt.jpg);
+  background-image: url(../img/youtube.jpg);
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -2204,7 +2204,7 @@ a.video-play-btn {
 }
 
 .feature-bg:after {
-  background-image: url(../img/feature-bg.jpg);
+  background-image: url(../img/pcologythum.png);
   position: absolute;
   right: 0;
   top: 0;

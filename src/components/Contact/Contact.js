@@ -10,7 +10,7 @@ const Contact = () => {
                         <div class="col-lg-8 mb-5 mb-lg-0">
                             <div class="form-title">
                                 <h2>Have you any question?</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ratione! Laboriosam est, assumenda. Perferendis, quo alias quaerat aliquid. Corporis ipsum minus voluptate? Dolore, esse natus!</p>
+                                <p>Please feel free to contact us should you have any questions!</p>
                             </div>
                             <div id="form_status"></div>
                             <div class="contact-form">
@@ -33,7 +33,7 @@ const Contact = () => {
                             <div class="contact-form-wrap">
                                 <div class="contact-form-box">
                                     <h4><i class="fas fa-map"></i> Shop Address</h4>
-                                    <p>34/8, East Hukupara <br /> Gifirtok, Sadan. <br /> Country Name</p>
+                                    <p>Near Ashoka Gas Godam <br />Singhariya,Kunraghat <br />Gorakhpur U.P</p>
                                 </div>
                                 <div class="contact-form-box">
                                     <h4><i class="far fa-clock"></i> Shop Hours</h4>
@@ -41,7 +41,7 @@ const Contact = () => {
                                 </div>
                                 <div class="contact-form-box">
                                     <h4><i class="fas fa-address-book"></i> Contact</h4>
-                                    <p>Phone: +00 111 222 3333 <br /> Email: support@fruitkha.com</p>
+                                    <p>Phone: +91 6393647326 <br /> Email: pcologyofficial@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -49,15 +49,6 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div class="find-location blue-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <p> <i class="fas fa-map-marker-alt"></i> Find Our Location</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
         </div>
