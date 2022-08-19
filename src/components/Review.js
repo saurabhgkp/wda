@@ -15,11 +15,10 @@ const Review = () => {
                                         <img src="assets/img/avaters/b.jpg" alt="" />
                                     </div>
                                     <div class="card-body text-secondary">
-                                        <h3 class="card-title">Saira Hakim <span>Local shop owner</span></h3>
+                                        <h3 class="card-title">Bhushanwa <span className='btn btn-primary'>Blogger</span></h3>
                                         <p class="card-text">
-                                            " Sed ut perspiciatis unde omnis iste natus error veritatis et quasi architecto
-                                            beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis
-                                            iste natus error sit voluptatem accusantium "
+                                            " Perfect store for CPU products. Kindly visit it if you looking
+                                            for high end gaming PC."
                                         </p>
                                         <div class="last-icon">
                                             <i class="fas fa-quote-right"></i>
@@ -35,11 +34,10 @@ const Review = () => {
                                         <img src="assets/img/avaters/avatar1.png" alt="" />
                                     </div>
                                     <div class="card-body text-secondary">
-                                        <h3 class="card-title">Saira Hakim <span>Local shop owner</span></h3>
+                                        <h3 class="card-title">Saira Hakim <span className='btn btn-primary'>Blogger</span></h3>
                                         <p class="card-text">
-                                            " Sed ut perspiciatis unde omnis iste natus error veritatis et quasi architecto
-                                            beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis
-                                            iste natus error sit voluptatem accusantium "
+                                            " Awesome experience and well explained about the products..Genuine
+                                            products at the best price are available here "
                                         </p>
                                         <div class="last-icon">
                                             <i class="fas fa-quote-right"></i>
@@ -55,11 +53,10 @@ const Review = () => {
                                         <img src="assets/img/avaters/avatar1.png" alt="" />
                                     </div>
                                     <div class="card-body text-secondary">
-                                        <h3 class="card-title">Saira Hakim <span>Local shop owner</span></h3>
+                                        <h3 class="card-title">Saira Hakim <span className='btn btn-primary'>Blogger</span></h3>
                                         <p class="card-text">
-                                            " Sed ut perspiciatis unde omnis iste natus error veritatis et quasi architecto
-                                            beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis
-                                            iste natus error sit voluptatem accusantium "
+                                            " The sales person is very friendly and supportive.
+                                            They guide us to buy the best CPU in my price range"
                                         </p>
                                         <div class="last-icon">
                                             <i class="fas fa-quote-right"></i>

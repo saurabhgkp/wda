@@ -36,6 +36,7 @@ const Navbar = () => {
                                         </li>
 
                                         <li><a href="/Contact">Contact</a></li>
+                                        <li><a href="/SingleProduct">SingleProduct</a></li>
                                         <li><a></a>
                                             {/* <ul class="sub-menu">
                                                 <li><a href="shop.html">Shop</a></li>

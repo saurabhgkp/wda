@@ -11,6 +11,7 @@ import About from './components/About/About';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
+import SingleProduct from './components/Product/SingleProduct';
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Product />} />
           <Route element={<Review />} />
         </Route >
+        <Route path="/SingleProduct/:id" element={<SingleProduct />} />
         <Route  >
           <Route path="/About" element={<About />} />
           <Route element={<Review />} />

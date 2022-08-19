@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 import React, { useEffect, useState } from "react";
 const Product = () => {
@@ -41,7 +42,8 @@ const Product = () => {
                                         <p class="product-price">{data[item].Title} </p>
                                         <h4 class="product-price">₹{data[item].Price} <del
                                             class="product-old-price">₹{data[item].OldPrice}</del></h4>
-                                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                                        <Link to={`SingleProduct/${data[item].id}`}>
+                                            <a class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a></Link>
                                     </div>
                                 </div>
 
