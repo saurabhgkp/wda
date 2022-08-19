@@ -36,7 +36,7 @@ const Hero = () => {
 
                                 </div>
                             </div>
-                            <a href="cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                            <a href="/" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Shop Now</a>
                         </div>
                     </div>
                 </div>

@@ -43,7 +43,7 @@ const Product = () => {
                                         <h4 class="product-price">₹{data[item].Price} <del
                                             class="product-old-price">₹{data[item].OldPrice}</del></h4>
                                         <Link to={`SingleProduct/${data[item].id}`}>
-                                            <a class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a></Link>
+                                            <a class="cart-btn"><i class="fas fa-shopping-cart"></i> Shop Now</a></Link>
                                     </div>
                                 </div>
 
