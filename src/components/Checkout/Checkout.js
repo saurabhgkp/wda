@@ -1,6 +1,33 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
+
 
 const Checkout = () => {
+
+    const { id } = useParams("");
+
+    const [data, setData] = React.useState("");
+
+    const getdata = async () => {
+
+        const res = await fetch(`https://pcology-api.herokuapp.com/googleSheet/getDataById/${id}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        console.log("====1", res);
+        const data = await res.json();
+        console.log("====1111", data);
+        setData(data.Data[0])
+
+    }
+
+    React.useEffect(() => {
+        getdata();
+    }, [])
+
+    const discount = data.OldPrice - data.Price
     return (
         <div>	<div class="top-header-area" id="sticker">
             <div class="container">
@@ -116,12 +143,12 @@ const Checkout = () => {
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <div class="billing-address-form">
-                                                    <form action="index.html">
-                                                        <p><input type="text" placeholder="Name" /></p>
-                                                        <p><input type="email" placeholder="Email" /></p>
-                                                        <p><input type="text" placeholder="Address" /></p>
-                                                        <p><input type="tel" placeholder="Phone" /></p>
-                                                        <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
+                                                    <form >
+                                                        <p><input type="text" placeholder="Name" required /></p>
+                                                        <p><input type="email" placeholder="Email" required /></p>
+                                                        <p><input type="tel" placeholder="Phone" required /></p>
+                                                        <p><input type="text" placeholder="Zip Code" required /></p>
+                                                        <p><textarea name="address" id="bill" cols="30" rows="10" placeholder="Full Address "></textarea></p>
                                                     </form>
                                                 </div>
                                             </div>
@@ -131,14 +158,14 @@ const Checkout = () => {
                                         <div class="card-header" id="headingTwo">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Shipping Address
+                                                    We Are Currently Operating On " Pay on Delivery "
                                                 </button>
                                             </h5>
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <div class="shipping-address-form">
-                                                    <p>Your shipping address form is here.</p>
+                                                    <p> We Are Currently Operating " Pay on Delivery "</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -147,14 +174,14 @@ const Checkout = () => {
                                         <div class="card-header" id="headingThree">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    Card Details
+                                                    You Get Confirmation Call Soon.
                                                 </button>
                                             </h5>
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                             <div class="card-body">
                                                 <div class="card-details">
-                                                    <p>Your card details goes here.</p>
+                                                    <p>You Get Confirmation Call Soon.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -175,34 +202,25 @@ const Checkout = () => {
                                     </thead>
                                     <tbody class="order-details-body">
                                         <tr>
-                                            <td>Product</td>
-                                            <td>Total</td>
+                                            <td>{data.Name}</td>
+                                            <td>₹{data.OldPrice}</td>
                                         </tr>
                                         <tr>
-                                            <td>Strawberry</td>
-                                            <td>$85.00</td>
+                                            <td>discount</td>
+                                            <td className='text-danger'>- ₹{discount}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Berry</td>
-                                            <td>$70.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lemon</td>
-                                            <td>$35.00</td>
-                                        </tr>
+
+
                                     </tbody>
                                     <tbody class="checkout-details">
+
                                         <tr>
-                                            <td>Subtotal</td>
-                                            <td>$190</td>
+                                            <td >Shipping</td>
+                                            <td>₹ 00</td>
                                         </tr>
                                         <tr>
-                                            <td>Shipping</td>
-                                            <td>$50</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Total</td>
-                                            <td>$240</td>
+                                            <td className='text-success '> <b>Total</b></td>
+                                            <td className='text-success '> <b> ₹{data.Price}</b></td>
                                         </tr>
                                     </tbody>
                                 </table>
