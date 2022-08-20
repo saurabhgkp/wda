@@ -1,12 +1,22 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
 
+import { useParams, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Checkout = () => {
-
+    let navigate = useNavigate();
     const { id } = useParams("");
+    const [pcname, setPcname] = useState("")
+    const [price, setprice] = useState("")
+    const [data, setData] = useState("");
+    const [fromData, setFromData] = useState({
+        name: "",
+        email: "",
+        number: "",
+        addres: "",
+        zip: ""
 
-    const [data, setData] = React.useState("");
+    });
 
     const getdata = async () => {
 
@@ -16,18 +26,55 @@ const Checkout = () => {
                 "Content-Type": "application/json"
             }
         });
-        console.log("====1", res);
+
         const data = await res.json();
-        console.log("====1111", data);
+
         setData(data.Data[0])
 
     }
 
-    React.useEffect(() => {
+    useEffect(() => {
+        setPcname(data.Name)
+        setprice(data.Price)
         getdata();
     }, [])
-
     const discount = data.OldPrice - data.Price
+    ////////////////////////////SEND DATA
+
+
+
+    const handelChange = (e) => {
+        e.preventDefault();
+        setFromData({ ...fromData, [e.target.name]: e.target.value });
+    };
+
+    // console.log(fromData);
+
+    const handelonSubmit = async (e) => {
+
+        let goData = {
+            B: fromData.name,
+            C: fromData.number,
+            D: fromData.addres,
+            E: fromData.email,
+            F: fromData.zip,
+
+            G: pcname,
+            H: price,
+
+        };
+
+
+        const response = await axios.post(
+            "https://pcology-api.herokuapp.com/orders/Adddata",
+            goData
+        )
+        navigate('/');
+
+
+    }
+
+
     return (
         <div>	<div class="top-header-area" id="sticker">
             <div class="container">
@@ -144,11 +191,11 @@ const Checkout = () => {
                                             <div class="card-body">
                                                 <div class="billing-address-form">
                                                     <form >
-                                                        <p><input type="text" placeholder="Name" required /></p>
-                                                        <p><input type="email" placeholder="Email" required /></p>
-                                                        <p><input type="tel" placeholder="Phone" required /></p>
-                                                        <p><input type="text" placeholder="Zip Code" required /></p>
-                                                        <p><textarea name="address" id="bill" cols="30" rows="10" placeholder="Full Address "></textarea></p>
+                                                        <p><input type="text" placeholder="Name" name="name" required="" onChange={handelChange} value={data.name} /></p>
+                                                        <p><input type="email" placeholder="Email" name="email" required="" onChange={handelChange} value={data.email} /></p>
+                                                        <p><input type="tel" placeholder="Phone" name="number" required="" onChange={handelChange} value={data.number} /></p>
+                                                        <p><input type="text" placeholder="Zip Code" name="zip" required="" onChange={handelChange} value={data.zip} /></p>
+                                                        <p><textarea id="bill" cols="30" rows="10" placeholder="Full Address " name="addres" required="" onChange={handelChange} value={data.addres} ></textarea></p>
                                                     </form>
                                                 </div>
                                             </div>
@@ -224,7 +271,9 @@ const Checkout = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="#" class="boxed-btn">Place Order</a>
+                                <br />
+                                <button class="btn btn-outline-success btn-lg" type="submit" onClick={handelonSubmit}><b>Place Order</b></button>
+
                             </div>
                         </div>
                     </div>
