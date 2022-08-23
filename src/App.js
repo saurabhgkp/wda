@@ -12,10 +12,12 @@ import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
 import SingleProduct from './components/Product/SingleProduct';
+import Navbar2 from './components/Nabvar/Navbar2';
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navbar2/>
       <Routes>
         <Route  >
           <Route path="/" element={<Hero />} />
