@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const Navbar2 = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark bg-dark"
-      style={{ position: "sticky", top: "0", zIndex: "10" }}
+      className="navbar navbar-expand-lg navbar-dark "
+      style={{ position: "sticky", top: "0", zIndex: "10", backgroundColor: "#051922" }}
     >
       <Link className="navbar-brand" to="/">
-        PCOLOGY
+        <img src="assets/img/pcology1.png" alt="PCOLOGY" />
       </Link>
       <button
         className="navbar-toggler"
@@ -28,7 +28,7 @@ const Navbar2 = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/About">
+            <Link className="nav-link " to="/About">
               About
             </Link>
           </li>
