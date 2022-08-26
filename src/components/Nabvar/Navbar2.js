@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 const Navbar2 = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-dark "
-      style={{ position: "sticky", top: "0", zIndex: "10", backgroundColor: "#051922" }}
+      className="navbar navbar-expand-lg navbar-dark d-flex d-lg-none"
+      style={{
+        position: "sticky",
+        top: "0",
+        zIndex: "10",
+        backgroundColor: "#051922",
+      }}
     >
       <Link className="navbar-brand" to="/">
         <img src="assets/img/pcology1.png" alt="PCOLOGY" />

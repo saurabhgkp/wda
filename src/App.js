@@ -17,7 +17,7 @@ import Navbar2 from "./components/Nabvar/Navbar2";
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Navbar2 />
       <Routes>
         <Route>
