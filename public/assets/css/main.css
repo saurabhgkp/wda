@@ -566,6 +566,8 @@ ul.navbar-nav li.nav-item.active a.nav-link {
   z-index: 999;
   width: 100%;
   padding: 25px 0;
+  
+
 }
 
 .top-header-area.white ul.navbar-nav li.nav-item a.nav-link,
@@ -650,7 +652,7 @@ nav.main-menu>ul li:last-child {
 
 .site-logo {
   float: left;
-  max-width: 150px;
+  max-width: 200px;
 }
 
 ul.sub-menu li:last-child {

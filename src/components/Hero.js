@@ -56,7 +56,7 @@ const Hero = () => {
                 <img
                   className="img-fluid"
                   src="assets/img/gamming.jpg"
-                  alt=""
+                  alt="cpu"
                 />
               </div>
             </div>

@@ -36,7 +36,7 @@ const Product = () => {
                                 <div class="col-lg-4 col-md-6  offset-md-3 offset-lg-0 text-center">
                                     <div class="single-product-item">
                                         <div class="product-image">
-                                            <a href="single-product.html"><img src={data[item].Image} alt="" /></a>
+                                            <img src={data[item].Image} alt="cpu" />
                                         </div>
                                         <h3>{data[item].Name}</h3>
                                         <p class="product-price">{data[item].Title} </p>

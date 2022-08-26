@@ -69,7 +69,7 @@ const FooterPage = () => {
             <div class="col-lg-6 col-md-12">
               <p>
                 Copyrights &copy; 2022 -{" "}
-                <a href="https://pcology.com/">Pcology</a>, All Rights Reserved.
+                <a href="https://pcology.in/">Pcology</a>, All Rights Reserved.
                 <br />
               </p>
             </div>
@@ -87,7 +87,7 @@ const FooterPage = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/invites/contact/?i=1kofhxkj77wfm&utm_content=p43j7ct" target="_blank">
                       <i class="fab fa-instagram"></i>
                     </a>
                   </li>

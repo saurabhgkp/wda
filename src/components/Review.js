@@ -12,7 +12,7 @@ const Review = () => {
                             <div class="list-box d-flex align-items-center">
                                 <div class=" text-center">
                                     <div class="client-avater">
-                                        <img src="assets/img/avaters/b.jpg" alt="" />
+                                        <img src="assets/img/avaters/b.jpg" alt="user1" />
                                     </div>
                                     <div class="card-body text-secondary">
                                         <h3 class="card-title">Bhushanwa <span className='btn btn-primary'>Blogger</span></h3>
@@ -31,7 +31,7 @@ const Review = () => {
                             <div class="list-box d-flex align-items-center">
                                 <div class=" text-center">
                                     <div class="client-avater">
-                                        <img src="assets/img/avaters/avatar1.png" alt="" />
+                                        <img src="assets/img/avaters/avatar1.png" alt="user2" />
                                     </div>
                                     <div class="card-body text-secondary">
                                         <h3 class="card-title">Saira Hakim <span className='btn btn-primary'>Blogger</span></h3>
@@ -50,7 +50,7 @@ const Review = () => {
                             <div class="list-box d-flex justify-content-start align-items-center">
                                 <div class=" text-center">
                                     <div class="client-avater">
-                                        <img src="assets/img/avaters/avatar1.png" alt="" />
+                                        <img src="assets/img/avaters/avatar1.png" alt="user3" />
                                     </div>
                                     <div class="card-body text-secondary">
                                         <h3 class="card-title">Saira Hakim <span className='btn btn-primary'>Blogger</span></h3>
