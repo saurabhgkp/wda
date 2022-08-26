@@ -43,7 +43,7 @@ const SingleProduct = () => {
                         <div class="single-product-item">
                             <div class="product-image">
 
-                                <a href="single-product.html"><img src={data.Image} alt="" /></a>
+                                <a href="single-product.html"><img src={data.Image} alt="cpu image" /></a>
 
                                 <h3>{data.Name}</h3>
                                 <p class="product-price">{data.Title} </p>
@@ -94,7 +94,7 @@ const SingleProduct = () => {
                         <div class="col-lg-4 col-md-6 text-center">
                             <div class="single-product-item">
                                 <div class="product-image">
-                                    <a href="/"><img src="assets/img/products/product-img-1.jpg" alt="" /></a>
+                                    <a href="/"><img src="assets/img/products/product-img-1.jpg" alt="cpu image" /></a>
                                 </div>
                                 <h3>The Gamming PC</h3>
                                 <p class="product-price"><span>Intel 3240 Processor</span> ₹40,000 </p>
@@ -104,7 +104,7 @@ const SingleProduct = () => {
                         <div class="col-lg-4 col-md-6 text-center">
                             <div class="single-product-item">
                                 <div class="product-image">
-                                    <a href="/"><img src="assets/img/products/product-img-2.jpg" alt="" /></a>
+                                    <a href="/"><img src="assets/img/products/product-img-2.jpg" alt="cpu image" /></a>
                                 </div>
                                 <h3>The Gamming PC</h3>
                                 <p class="product-price"><span>Intel 3240 Processor</span> ₹40,000 </p>
@@ -114,7 +114,7 @@ const SingleProduct = () => {
                         <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
                             <div class="single-product-item">
                                 <div class="product-image">
-                                    <a href="/"><img src="assets/img/products/product-img-3.jpg" alt="" /></a>
+                                    <a href="/"><img src="assets/img/products/product-img-3.jpg" alt="cpu image" /></a>
                                 </div>
                                 <h3>The Gamming PC</h3>
                                 <p class="product-price"><span>Intel 3240 Processor</span> ₹40,000</p>
