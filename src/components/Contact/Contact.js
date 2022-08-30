@@ -3,11 +3,11 @@ import React from "react";
 const Contact = () => {
   return (
     <div>
-      <div class="breadcrumb-section breadcrumb-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 text-center">
-              <div class="breadcrumb-text">
+      <div className="breadcrumb-section breadcrumb-bg">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2 text-center">
+              <div className="breadcrumb-text">
                 <p>Replacement</p>
                 <h1>Contact Us</h1>
               </div>
@@ -15,17 +15,17 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mb-5 mb-lg-0">
-            <div class="form-title">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 mb-5 mb-lg-0">
+            <div className="form-title">
               <h2>Have you any question?</h2>
               <p>
                 Please feel free to contact us should you have any questions!
               </p>
             </div>
             <div id="form_status"></div>
-            <div class="contact-form">
+            <div className="contact-form">
               <form
                 type="POST"
                 id="fruitkha-contact"
@@ -70,11 +70,11 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="contact-form-wrap">
-              <div class="contact-form-box">
+          <div className="col-lg-4">
+            <div className="contact-form-wrap">
+              <div className="contact-form-box">
                 <h4>
-                  <i class="fas fa-map"></i> Shop Address
+                  <i className="fas fa-map"></i> Shop Address
                 </h4>
                 <p>
                   Near Ashoka Gas Godam <br />
@@ -82,17 +82,17 @@ const Contact = () => {
                   Gorakhpur U.P
                 </p>
               </div>
-              <div class="contact-form-box">
+              <div className="contact-form-box">
                 <h4>
-                  <i class="far fa-clock"></i> Shop Hours
+                  <i className="far fa-clock"></i> Shop Hours
                 </h4>
                 <p>
                   MON - FRIDAY: 8 to 9 PM <br /> SAT - SUN: 10 to 8 PM{" "}
                 </p>
               </div>
-              <div class="contact-form-box">
+              <div className="contact-form-box">
                 <h4>
-                  <i class="fas fa-address-book"></i> Contact
+                  <i className="fas fa-address-book"></i> Contact
                 </h4>
                 <p>
                   Phone: +91 6393647326 <br /> Email: pcologyofficial@gmail.com

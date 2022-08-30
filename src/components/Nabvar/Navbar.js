@@ -12,24 +12,24 @@ const Navbar = () => {
       }}
     >
       <div
-        class="top-header-area d-none d-md-block"
+        className="top-header-area d-none d-md-block"
         style={{
           backgroundColor: "#051922",
         }}
       >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-sm-12 text-center">
-              <div class="main-menu-wrap">
-                <div class="site-logo">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 col-sm-12 text-center">
+              <div className="main-menu-wrap">
+                <div className="site-logo">
                   <Link to="/">
                     <img src="assets/img/pcology1.png" alt="pcology" />
                   </Link>
                 </div>
 
-                <nav class="main-menu">
+                <nav className="main-menu">
                   <ul>
-                    <li class="current-list-item">
+                    <li className="current-list-item">
                       <Link to="/">Home</Link>
                     </li>
                     <li>

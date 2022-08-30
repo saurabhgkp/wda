@@ -36,11 +36,11 @@ const SingleProduct = () => {
   //  console.log("===", data);
   return (
     <div>
-      <div class="breadcrumb-section breadcrumb-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 text-center">
-              <div class="breadcrumb-text">
+      <div className="breadcrumb-section breadcrumb-bg">
+        <div className="container">
+          <div className="row">s
+            <div className="col-lg-8 offset-lg-2 text-center">
+              <div className="breadcrumb-text">
                 <p>Free Shipping</p>
                 <h1>Product Details</h1>
               </div>
@@ -48,38 +48,38 @@ const SingleProduct = () => {
           </div>
         </div>
       </div>
-      <div class="single-product mt-150 mb-150">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="single-product-item">
-                <div class="product-image">
+      <div className="single-product mt-150 mb-150">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-5">
+              <div className="single-product-item">
+                <div className="product-image">
                   <a href="single-product.html">
                     <img src={data.Image} alt="" />
                   </a>
 
                   <h3>{data.Name}</h3>
-                  <p class="product-price">{data.Title} </p>
-                  <h4 class="product-price">
+                  <p className="product-price">{data.Title} </p>
+                  <h4 className="product-price">
                     ₹{data.Price}{" "}
-                    <del class="product-old-price">₹{data.OldPrice}</del>
+                    <del className="product-old-price">₹{data.OldPrice}</del>
                   </h4>
                   <Link to={`/Checkout/${data.id}`}>
-                    <a class="cart-btn">
-                      <i class="fas fa-shopping-cart"></i>Shop Now
+                    <a className="cart-btn">
+                      <i className="fas fa-shopping-cart"></i>Shop Now
                     </a>
                   </Link>
                 </div>
               </div>
             </div>
-            <div class="col-md-7">
-              <div class="single-product-content">
+            <div className="col-md-7">
+              <div className="single-product-content">
                 <h3>{data.Name}</h3>
-                <p class="single-product-pricing">
+                <p className="single-product-pricing">
                   <span>{data.Title}</span>
                 </p>
                 <p>{data.Details}</p>
-                <div class="single-product-form">
+                <div className="single-product-form">
                   <p>
                     <strong>Processor: </strong>
                     <br />
@@ -118,25 +118,25 @@ const SingleProduct = () => {
                   <hr />
                 </div>
                 <h4>Share:</h4>
-                <ul class="product-share">
+                <ul className="product-share">
                   <li>
                     <a href="">
-                      <i class="fab fa-facebook-f"></i>
+                      <i className="fab fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <i class="fab fa-twitter"></i>
+                      <i className="fab fa-twitter"></i>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <i class="fab fa-google-plus-g"></i>
+                      <i className="fab fa-google-plus-g"></i>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <i class="fab fa-linkedin"></i>
+                      <i className="fab fa-linkedin"></i>
                     </a>
                   </li>
                 </ul>
@@ -146,21 +146,21 @@ const SingleProduct = () => {
         </div>
       </div>
 
-      <div class="more-products mb-150">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 text-center">
-              <div class="section-title">
+      <div className="more-products mb-150">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2 text-center">
+              <div className="section-title">
                 <h3>
-                  <span class="orange-text">Related</span> Products
+                  <span className="orange-text">Related</span> Products
                 </h3>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 text-center">
-              <div class="single-product-item">
-                <div class="product-image">
+          <div className="row">
+            <div className="col-lg-4 col-md-6 text-center">
+              <div className="single-product-item">
+                <div className="product-image">
                   <a href="/">
                     <img
                       src="assets/img/products/product-img-1.jpg"
@@ -169,17 +169,17 @@ const SingleProduct = () => {
                   </a>
                 </div>
                 <h3>The Gamming PC</h3>
-                <p class="product-price">
+                <p className="product-price">
                   <span>Intel 3240 Processor</span> ₹40,000{" "}
                 </p>
-                <a href="/" class="cart-btn">
-                  <i class="fas fa-shopping-cart"></i> Shop Now
+                <a href="/" className="cart-btn">
+                  <i className="fas fa-shopping-cart"></i> Shop Now
                 </a>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 text-center">
-              <div class="single-product-item">
-                <div class="product-image">
+            <div className="col-lg-4 col-md-6 text-center">
+              <div className="single-product-item">
+                <div className="product-image">
                   <a href="/">
                     <img
                       src="assets/img/products/product-img-2.jpg"
@@ -188,17 +188,17 @@ const SingleProduct = () => {
                   </a>
                 </div>
                 <h3>The Gamming PC</h3>
-                <p class="product-price">
+                <p className="product-price">
                   <span>Intel 3240 Processor</span> ₹40,000{" "}
                 </p>
-                <a href="/" class="cart-btn">
-                  <i class="fas fa-shopping-cart"></i>Shop Now
+                <a href="/" className="cart-btn">
+                  <i className="fas fa-shopping-cart"></i>Shop Now
                 </a>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
-              <div class="single-product-item">
-                <div class="product-image">
+            <div className="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
+              <div className="single-product-item">
+                <div className="product-image">
                   <a href="/">
                     <img
                       src="assets/img/products/product-img-3.jpg"
@@ -207,11 +207,11 @@ const SingleProduct = () => {
                   </a>
                 </div>
                 <h3>The Gamming PC</h3>
-                <p class="product-price">
+                <p className="product-price">
                   <span>Intel 3240 Processor</span> ₹40,000
                 </p>
-                <a href="/" class="cart-btn">
-                  <i class="fas fa-shopping-cart"></i> Shop Now
+                <a href="/" className="cart-btn">
+                  <i className="fas fa-shopping-cart"></i> Shop Now
                 </a>
               </div>
             </div>

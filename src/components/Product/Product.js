@@ -15,39 +15,39 @@ const Product = () => {
   return (
     <div>
       {" "}
-      <div class="product-section mt-150 mb-150">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 text-center">
-              <div class="section-title">
+      <div className="product-section mt-150 mb-150">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2 text-center">
+              <div className="section-title">
                 <h3>
-                  <span class="orange-text">Our</span> Products
+                  <span className="orange-text">Our</span> Products
                 </h3>
               </div>
             </div>
           </div>
 
-          <div class="row">
+          <div className="row">
             {Object.keys(data).map((item, index) => {
               return (
                 <>
                   {data[item].id ? (
-                    <div class="col-lg-4 col-md-6  offset-md-3 offset-lg-0 text-center">
-                      <div class="single-product-item">
-                        <div class="product-image">
+                    <div className="col-lg-4 col-md-6  offset-md-3 offset-lg-0 text-center">
+                      <div className="single-product-item">
+                        <div className="product-image">
                           <img src={data[item].Image} alt="pc" />
                         </div>
                         <h3>{data[item].Name}</h3>
-                        <p class="">{data[item].Title} </p>
-                        <h4 class="product-price">
+                        <p className="">{data[item].Title} </p>
+                        <h4 className="product-price">
                           ₹{data[item].Price}{" "}
-                          <del class="product-old-price">
+                          <del className="product-old-price">
                             ₹{data[item].OldPrice}
                           </del>
                         </h4>
                         <Link to={`SingleProduct/${data[item].id}`}>
-                          <a class="cart-btn">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
+                          <a className="cart-btn">
+                            <i className="fas fa-shopping-cart"></i> Shop Now
                           </a>
                         </Link>
                       </div>

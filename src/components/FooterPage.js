@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const FooterPage = () => {
   return (
     <div>
-      <div class="footer-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-box about-widget">
-                <h2 class="widget-title">About us</h2>
+      <div className="footer-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6">
+              <div className="footer-box about-widget">
+                <h2 className="widget-title">About us</h2>
                 <p>
                   We are dedicated to our customers. We have great experience in
                   building computers for our clients. We deal in all kinds of
@@ -18,9 +18,9 @@ const FooterPage = () => {
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-box get-in-touch">
-                <h2 class="widget-title">Get in Touch</h2>
+            <div className="col-lg-3 col-md-6">
+              <div className="footer-box get-in-touch">
+                <h2 className="widget-title">Get in Touch</h2>
                 <ul>
                   <li>Near Ashoka Gas Godam Singhariya,Kunraghat, Gorakhpur</li>
                   <li>pcologyofficial@gmail.com</li>
@@ -28,9 +28,9 @@ const FooterPage = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-box pages">
-                <h2 class="widget-title">Pages</h2>
+            <div className="col-lg-3 col-md-6">
+              <div className="footer-box pages">
+                <h2 className="widget-title">Pages</h2>
                 <ul>
                   <li>
                     <Link to="/">Home</Link>
@@ -48,14 +48,14 @@ const FooterPage = () => {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-box subscribe">
-                <h2 class="widget-title">Subscribe</h2>
+            <div className="col-lg-3 col-md-6">
+              <div className="footer-box subscribe">
+                <h2 className="widget-title">Subscribe</h2>
                 <p>Subscribe to our mailing list to get the latest updates.</p>
                 <form action="index.html">
                   <input type="email" placeholder="Email" />
                   <button type="submit">
-                    <i class="fas fa-paper-plane"></i>
+                    <i className="fas fa-paper-plane"></i>
                   </button>
                 </form>
               </div>
@@ -63,37 +63,37 @@ const FooterPage = () => {
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-12">
+      <div className="copyright">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-12">
               <p>
                 Copyrights &copy; 2022 -{" "}
                 <a href="https://pcology.in/">Pcology</a>, All Rights Reserved.
                 <br />
               </p>
             </div>
-            <div class="col-lg-6 text-right col-md-12">
-              <div class="social-icons">
+            <div className="col-lg-6 text-right col-md-12">
+              <div className="social-icons">
                 <ul>
                   <li>
                     <a href="#" target="_blank">
-                      <i class="fab fa-facebook-f"></i>
+                      <i className="fab fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank">
-                      <i class="fab fa-twitter"></i>
+                      <i className="fab fa-twitter"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank">
-                      <i class="fab fa-instagram"></i>
+                      <i className="fab fa-instagram"></i>
                     </a>
                   </li>
                   <li>
                     <a href="#" target="_blank">
-                      <i class="fab fa-linkedin"></i>
+                      <i className="fab fa-linkedin"></i>
                     </a>
                   </li>
                 </ul>

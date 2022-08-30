@@ -13,6 +13,8 @@ import Checkout from "./components/Checkout/Checkout";
 import Contact from "./components/Contact/Contact";
 import SingleProduct from "./components/Product/SingleProduct";
 import Navbar2 from "./components/Nabvar/Navbar2";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
       {/* <Discount /> */}
 
       <FooterPage />
+     <ToastContainer/>
+
     </>
   );
 }
