@@ -270,7 +270,7 @@ const Checkout = () => {
                             <p>
                               <input
                                 type="text"
-                                placeholder="Zip Code"
+                                placeholder="Pin Code"
                                 name="zip"
                                 required=""
                                 onChange={handelChange}

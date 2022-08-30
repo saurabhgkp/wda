@@ -8,7 +8,7 @@ const Contact = () => {
           <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
               <div class="breadcrumb-text">
-                <p>FReplacement</p>
+                <p>Replacement</p>
                 <h1>Contact Us</h1>
               </div>
             </div>

@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./components/Nabvar/Navbar";
 import Hero from "./components/Hero";
 import Review from "./components/Review";
-import Discount from "./components/Discount";
+//import Discount from "./components/Discount";
 import { Routes, Route } from "react-router-dom";
 
 import FooterPage from "./components/FooterPage";

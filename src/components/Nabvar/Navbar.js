@@ -23,7 +23,7 @@ const Navbar = () => {
               <div class="main-menu-wrap">
                 <div class="site-logo">
                   <Link to="/">
-                    <img src="assets/img/pcology1.png" alt="" />
+                    <img src="assets/img/pcology1.png" alt="pcology" />
                   </Link>
                 </div>
 

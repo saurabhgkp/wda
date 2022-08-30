@@ -162,7 +162,10 @@ const SingleProduct = () => {
               <div class="single-product-item">
                 <div class="product-image">
                   <a href="/">
-                    <img src="assets/img/products/product-img-1.jpg" alt="" />
+                    <img
+                      src="assets/img/products/product-img-1.jpg"
+                      alt="product-img"
+                    />
                   </a>
                 </div>
                 <h3>The Gamming PC</h3>
@@ -178,7 +181,10 @@ const SingleProduct = () => {
               <div class="single-product-item">
                 <div class="product-image">
                   <a href="/">
-                    <img src="assets/img/products/product-img-2.jpg" alt="" />
+                    <img
+                      src="assets/img/products/product-img-2.jpg"
+                      alt="product-img"
+                    />
                   </a>
                 </div>
                 <h3>The Gamming PC</h3>
@@ -194,7 +200,10 @@ const SingleProduct = () => {
               <div class="single-product-item">
                 <div class="product-image">
                   <a href="/">
-                    <img src="assets/img/products/product-img-3.jpg" alt="" />
+                    <img
+                      src="assets/img/products/product-img-3.jpg"
+                      alt="product-img"
+                    />
                   </a>
                 </div>
                 <h3>The Gamming PC</h3>
