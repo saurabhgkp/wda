@@ -2,6 +2,11 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 
 const SingleProduct = () => {
+
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
+
   const { id } = useParams("");
 
   const [data, setData] = React.useState("");

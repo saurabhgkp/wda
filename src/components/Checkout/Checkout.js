@@ -102,9 +102,12 @@ const Checkout = () => {
         address: "",
         zip: "",
       })
+
+      setData({ })
+      toast.success("ruko zara sabr karo")
+      navigate("/");
     }
-    setData({ })
-    navigate("/");
+
   };
 
   return (

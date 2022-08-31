@@ -1,6 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import validator from "validator";
 
 const Contact = () => {
+
+  const [userDetails, setUserDetails] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const validateForm = (e) =>{
+
+    e.preventDefault()
+    if(!userDetails.name || !userDetails.email || !userDetails.phone || !userDetails.subject  || !userDetails.message){
+      toast.error('All fields are mandatory')
+    }
+    else if(!validator.isEmail(userDetails.email)){
+      toast.error('Invalid email')
+    }
+    else if(!validator.isMobilePhone(userDetails.phone)){
+      toast.error('Invalid phone number')
+    }
+    else{
+      console.log("Submit")
+      submitForm()
+    }
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserDetails({
+      ...userDetails,
+      [name]:value
+    })
+  };
+
+  const submitForm = () =>{
+  
+    console.log('userDetails------->',userDetails)
+  }
+
   return (
     <div>
       <div className="breadcrumb-section breadcrumb-bg">
@@ -29,15 +71,17 @@ const Contact = () => {
               <form
                 type="POST"
                 id="fruitkha-contact"
-                onSubmit="return valid_datas( this );"
+                onSubmit={validateForm}
               >
                 <p>
-                  <input type="text" placeholder="Name" name="name" id="name" />
+                  <input type="text" placeholder="Name" name="name" id="name" value={userDetails.name} onChange={handleChange}/>
                   <input
-                    type="email"
+                    type="text"
                     placeholder="Email"
                     name="email"
                     id="email"
+                    value={userDetails.email}
+                    onChange={handleChange}
                   />
                 </p>
                 <p>
@@ -46,12 +90,16 @@ const Contact = () => {
                     placeholder="Phone"
                     name="phone"
                     id="phone"
+                    value={userDetails.phone}
+                    onChange={handleChange}
                   />
                   <input
                     type="text"
                     placeholder="Subject"
                     name="subject"
                     id="subject"
+                    value={userDetails.subject}
+                    onChange={handleChange}
                   />
                 </p>
                 <p>
@@ -61,7 +109,9 @@ const Contact = () => {
                     cols="30"
                     rows="10"
                     placeholder="Message"
-                  ></textarea>
+                    value={userDetails.message}
+                    onChange={handleChange}
+                  />
                 </p>
                 <input type="hidden" name="token" value="FsWga4&@f6aw" />
                 <p>
