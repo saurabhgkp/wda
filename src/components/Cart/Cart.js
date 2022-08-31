@@ -42,7 +42,7 @@ const Cart = () => {
                       <td className="product-image">
                         <img
                           src="assets/img/products/product-img-1.jpg"
-                          alt="pcology1"
+                          alt="cpu computer"
                         />
                       </td>
                       <td className="product-name">Strawberry</td>
@@ -61,7 +61,7 @@ const Cart = () => {
                       <td className="product-image">
                         <img
                           src="assets/img/products/product-img-2.jpg"
-                          alt="pcology1"
+                          alt="cpu computer"
                         />
                       </td>
                       <td className="product-name">Berry</td>
@@ -80,7 +80,7 @@ const Cart = () => {
                       <td className="product-image">
                         <img
                           src="assets/img/products/product-img-3.jpg"
-                          alt="pcology"
+                          alt="cpu computer"
                         />
                       </td>
                       <td className="product-name">Lemon</td>
