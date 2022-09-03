@@ -6,62 +6,16 @@ const Deshboard = () => {
         <>
             <div className="breadcrumb-section breadcrumb-bg">
                 <div className="container">
-                    <div className="row">s
+                    <div className="row">
                         <div className="col-lg-8 offset-lg-2 text-center">
                             <div className="breadcrumb-text">
-                                <p>Free Shipping</p>
-                                <h1>Product Details</h1>
+                                <p>View & Manage orders and returns</p>
+                                <h1>My Account</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynav"
-                        aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <div class="d-flex">
-                            <div class="d-flex align-items-center logo bg-purple">
-                                <div class="fab fa-joomla h2 text-white"></div>
-                            </div>
-                            <div class="ms-3 d-flex flex-column">
-                                <div class="h4">Furfection</div>
-                                <div class="fs-6">My pet App</div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="collapse navbar-collapse" id="mynav">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Categories <span
-                                    class="fas fa-th-large px-1"></span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Exclusive</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Collections</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blogs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <div class="cart bg-purple">
-                                        <span class="fas fa-shopping-cart text-white"></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"> <span class="fas fa-user pe-2"></span> Hello Jhon</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
 
             <div class="container mt-4">
                 <div class="row">
