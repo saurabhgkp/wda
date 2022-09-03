@@ -74,6 +74,19 @@ const SingleProduct = () => {
                       <i className="fas fa-shopping-cart"></i>Shop Now
                     </a>
                   </Link>
+                  <div className=" row p-3"  >
+                    <div className="shopping-cart col ml" style={
+                      {
+                        color: "#F28123"
+                      }}>
+                      <a className="cart-btn"><i
+                        class=" fas fa-shopping-cart"></i> Add</a> </div><div className="shopping-cart col mr">
+                      <a className="cart-btn"
+                      >
+                        <i
+                          class=" fa fa-heart"></i> Favorite
+                        {/* <i class="fa fa-heart-o" ></i>*/}</a></div>
+                  </div>
                 </div>
               </div>
             </div>

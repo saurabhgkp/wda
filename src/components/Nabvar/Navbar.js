@@ -8,6 +8,7 @@ const Navbar = () => {
         position: "sticky",
         top: "0",
         zIndex: "10",
+        fontSize: "16px"
         //backgroundColor: "#051922",
       }}
     >
@@ -30,7 +31,7 @@ const Navbar = () => {
                 <nav className="main-menu">
                   <ul>
                     <li className="current-list-item">
-                      <Link to="/">Home</Link>
+                      <Link to="/"><i class=" fa fa-home x-3"></i></Link>
                     </li>
                     <li>
                       <Link to="/About">About</Link>
@@ -40,10 +41,18 @@ const Navbar = () => {
                       <Link to="/Contact">Contact</Link>
                     </li>
                     <li>
-                      <Link to="/">Shop</Link>
+                      <Link to="/User">Shop</Link>
                     </li>
 
-                    <li></li>
+                    <li> <li>
+                      <div class="header-icons">
+                        <a class="shopping-cart" href="/Cart"><i
+                          class=" fas fa-shopping-cart"></i></a>
+
+                        <li><a href="#"> Sign Up / Login</a></li>
+
+                      </div>
+                    </li></li>
                   </ul>
                 </nav>
               </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import Product from "./Product/Product";
-import Review from "./Review";
+import Product from "../Product/Product";
+import Review from "../../components/Review";
 
 const Hero = () => {
   return (

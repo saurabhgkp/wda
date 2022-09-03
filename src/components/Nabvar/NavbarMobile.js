@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Navbar2 = () => {
+const NavbarMobile = () => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark d-flex d-lg-none"
@@ -54,4 +54,4 @@ const Navbar2 = () => {
   );
 };
 
-export default Navbar2;
+export default NavbarMobile;
