@@ -8,7 +8,7 @@ const Navbar = () => {
         position: "sticky",
         top: "0",
         zIndex: "10",
-        fontSize: "16px"
+
         //backgroundColor: "#051922",
       }}
     >
