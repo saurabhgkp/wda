@@ -49,7 +49,7 @@ const Navbar = () => {
                         <a class="shopping-cart" href="/Cart"><i
                           class=" fas fa-shopping-cart"></i></a>
 
-                        <li><a href="#"> Sign Up / Login</a></li>
+                        <li><a href="/Login"> Sign Up / Login</a></li>
 
                       </div>
                     </li></li>

@@ -15,6 +15,7 @@ import SingleProduct from "../pages/Product/SingleProduct";
 import NavbarMobile from "../components/Nabvar/NavbarMobile";
 import { ToastContainer } from "react-toastify";
 import Deshboard from '../pages/User/Deshboard';
+import Login from '../pages/Login/Login';
 const MainRouter = () => {
     return (
         <>
@@ -35,6 +36,7 @@ const MainRouter = () => {
                 <Route path="/Checkout/:id" element={<Checkout />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/User" element={<Deshboard />} />
+                <Route path="/Login" element={<Login />} />
             </Routes>
 
             {/* <Discount /> */}
