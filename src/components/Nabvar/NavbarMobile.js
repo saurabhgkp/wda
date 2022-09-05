@@ -1,7 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 const NavbarMobile = () => {
+
+  const [token,setToken] = useState()
+
+function login () {
+  var token = "gsgggsfgh";
+  localStorage.setItem("pwd",token)
+  setToken(token)
+  console.log(token);
+}
+function logout () {
+  localStorage.removeItem("pwd")
+  setToken('')
+}
+  
   return (
+    <>
     <nav
       className="navbar navbar-expand-lg navbar-dark d-flex d-lg-none"
       style={{
@@ -37,7 +52,6 @@ const NavbarMobile = () => {
               About
             </Link>
           </li>
-
           <li className="nav-item">
             <Link className="nav-link" to="/Contact">
               Contact
@@ -51,6 +65,29 @@ const NavbarMobile = () => {
         </ul>
       </div>
     </nav>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom d-flex d-lg-none">
+    <div class="container-fluid">
+   
+    <ul class="nav nav-pills">
+    <li class="nav-item">
+    <a class="nav-link text-white" href="#"><i class="fa-2x fas fa-shopping-cart"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="#"><i class="fa-2x fa fa-heart" aria-hidden="true"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="#"><i class="fa-2x fa fa-user-circle" aria-hidden="true"></i></a>
+  </li>
+
+  <li class="nav-item">{token? 
+    <Link to ="/" onClick={logout} class="nav-link text-white"><i class="fa-2x fa fa-power-off" aria-hidden="true"></i></Link>:
+    <Link to="/" onClick={login} class="nav-link text-white"><i class="fa-2x fa fa-plug" aria-hidden="true"></i></Link>}
+   
+  </li>
+</ul>
+  </div>
+</nav>
+    </>
   );
 };
 

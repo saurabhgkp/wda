@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const SubNav = () => {
 const [token,setToken] = useState()
-
+  const aaa = localStorage.getItem('pwd')
 function login () {
   var token = "gsgggsfgh";
   localStorage.setItem("pwd",token)
@@ -12,7 +12,7 @@ function login () {
 }
 function logout () {
   localStorage.removeItem("pwd")
-  setToken('')
+  setToken()
 }
 
 
@@ -60,8 +60,11 @@ function logout () {
                       <div class="header-icons">
                         <a class="shopping-cart" href="/Cart"><i
                           class=" fas fa-shopping-cart"></i></a>
- <li>{ (token) ? <Link to ="/" onClick={logout}><a ><i class="fa fa-power-off" aria-hidden="true"></i>LogOut</a></Link>:<Link to="/" onClick={login}><a  >Login</a></Link> }</li> 
-                 
+ <li>{ aaa ? <Link to="/" onClick={login}><a  >Login</a></Link>:<Link to ="/" onClick={logout}><a >LogOut</a></Link> }</li> 
+
+                       
+
+                        
                       </div>
                     </li></li>
                   </ul>
@@ -70,10 +73,9 @@ function logout () {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default SubNav;

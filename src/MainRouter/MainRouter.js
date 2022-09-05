@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from "../components/Nabvar/Navbar";
 import Hero from "../pages/Hero/Hero";
 import Review from "../components/Review";
@@ -6,7 +6,7 @@ import Review from "../components/Review";
 import { Routes, Route } from "react-router-dom";
 
 import FooterPage from "../components/FooterPage";
-import Product from "../pages/Product/Product";
+
 import About from "../pages/About/About";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
@@ -16,15 +16,36 @@ import NavbarMobile from "../components/Nabvar/NavbarMobile";
 import { ToastContainer } from "react-toastify";
 import Deshboard from '../pages/User/Deshboard';
 import Login from '../pages/Login/Login';
+import ProtectedRoute from './ProtectedRoute';
 const MainRouter = () => {
+
+    const [islogin,setIslogin] = useState('')
+
+    useEffect(()=>{
+         checkLogin()
+    },[])
+
+    const checkLogin = () =>{
+        const token = localStorage.getItem('pwd')
+        if(token){
+            setIslogin(true)
+
+        }else{
+            setIslogin(false)
+        }
+    }
+
+
+    
     return (
         <>
+       
             <Navbar />
             <NavbarMobile />
             <Routes>
                 <Route>
                     <Route path="/" element={<Hero />} />
-                    <Route path="/" element={<Product />} />
+                    {/* <Route path="/" element={<Product />} /> */}
                     <Route element={<Review />} />
                 </Route>
                 <Route path="/SingleProduct/:id" element={<SingleProduct />} />
@@ -32,8 +53,8 @@ const MainRouter = () => {
                     <Route path="/About" element={<About />} />
                     <Route element={<Review />} />
                 </Route>
-                <Route path="/Cart" element={<Cart />} />
-                <Route path="/Checkout/:id" element={<Checkout />} />
+                <Route path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+                <Route path="/Checkout/:id" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/User" element={<Deshboard />} />
                 <Route path="/Login" element={<Login />} />
