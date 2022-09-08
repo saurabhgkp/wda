@@ -47,7 +47,7 @@ function logout () {
                       <Link to="/"><i class=" fa fa-home x-3"></i></Link>
                     </li>
                     <li>
-                      <Link to="/About">About</Link>
+                         <Link to="/About">About</Link>
                     </li>
                     <li>
                       <Link to="/Contact">Contact</Link>

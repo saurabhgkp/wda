@@ -65,25 +65,25 @@ function logout () {
         </ul>
       </div>
     </nav>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom d-flex d-lg-none">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom d-flex  justify-content-around">
     <div class="container-fluid">
    
     <ul class="nav nav-pills">
-    <li class="nav-item">
+  <div>  <li class="nav-item">
     <a class="nav-link text-white" href="#"><i class="fa-2x fas fa-shopping-cart"></i></a>
-  </li>
+  </li></div><div>
   <li class="nav-item">
     <a class="nav-link text-white" href="#"><i class="fa-2x fa fa-heart" aria-hidden="true"></i></a>
-  </li>
+  </li></div><div>
   <li class="nav-item">
     <a class="nav-link text-white" href="#"><i class="fa-2x fa fa-user-circle" aria-hidden="true"></i></a>
-  </li>
+  </li></div><div>
 
   <li class="nav-item">{token? 
     <Link to ="/" onClick={logout} class="nav-link text-white"><i class="fa-2x fa fa-power-off" aria-hidden="true"></i></Link>:
     <Link to="/" onClick={login} class="nav-link text-white"><i class="fa-2x fa fa-plug" aria-hidden="true"></i></Link>}
    
-  </li>
+  </li></div>
 </ul>
   </div>
 </nav>
