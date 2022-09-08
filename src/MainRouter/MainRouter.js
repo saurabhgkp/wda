@@ -19,27 +19,27 @@ import Login from '../pages/Login/Login';
 import ProtectedRoute from './ProtectedRoute';
 const MainRouter = () => {
 
-    const [islogin,setIslogin] = useState('')
+    const [islogin, setIslogin] = useState('')
 
-    useEffect(()=>{
-         checkLogin()
-    },[])
+    useEffect(() => {
+        checkLogin()
+    }, [])
 
-    const checkLogin = () =>{
+    const checkLogin = () => {
         const token = localStorage.getItem('pwd')
-        if(token){
+        if (token) {
             setIslogin(true)
 
-        }else{
+        } else {
             setIslogin(false)
         }
     }
 
 
-    
+
     return (
         <>
-       
+
             <Navbar />
             <NavbarMobile />
             <Routes>
@@ -56,7 +56,7 @@ const MainRouter = () => {
                 <Route path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
                 <Route path="/Checkout/:id" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
                 <Route path="/Contact" element={<Contact />} />
-                <Route path="/User" element={<Deshboard />} />
+                <Route path="/User" element={<ProtectedRoute><Deshboard /></ProtectedRoute>} />
                 <Route path="/Login" element={<Login />} />
             </Routes>
 
