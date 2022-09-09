@@ -120,7 +120,7 @@ const NavbarMobile = () => {
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
             className='mx-auto w-100 text-center'
-          / > </nav>
+           > Login with Google</GoogleLogin></nav>
                             :
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom d-flex  justify-content-around d-lg-none">
         <div class="container-fluid">
