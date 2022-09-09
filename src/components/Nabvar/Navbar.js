@@ -33,6 +33,7 @@ const Navbar = () => {
 
   const onFailure = (response) => {
     console.log(response);
+    if(response?.error!=='popup_closed_by_user')
     toast.error("Might be an issue!! please try again later")
   }
 

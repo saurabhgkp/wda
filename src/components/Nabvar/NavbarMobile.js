@@ -1,8 +1,51 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { gapi } from 'gapi-script';
+import { toast } from 'react-toastify';
+
+
 const NavbarMobile = () => {
 
   const [token, setToken] = useState()
+
+  const clientId = '274492401016-j54651qg7maf329cdddq6aavlbb5a35l.apps.googleusercontent.com'
+
+  // function login () {
+  //   var token = "gsgggsfgh";
+  //   localStorage.setItem("pwd",token)
+  //   setToken(token)
+  //   console.log(token);
+  // }
+  function logout() {
+    console.log('logout')
+    localStorage.removeItem("pwd")
+    setToken()
+  }
+
+
+  useEffect(() => {
+    const initClient = () => {
+      gapi.client.init({
+        clientId: clientId,
+        scope: ''
+      });
+    };
+    gapi.load('client:auth2', initClient);
+  });
+
+  const onFailure = (response) => {
+    console.log(response);
+    if(response?.error!=='popup_closed_by_user')
+    toast.error("Might be an issue!! please try again later")
+  }
+
+  const onSuccess = (res) => {
+    console.log(res?.accessToken);
+    localStorage.setItem('pwd', res?.accessToken)
+    setToken(res?.accessToken)
+  }
+
 
   function login() {
     var token = "gsgggsfgh";
@@ -68,6 +111,19 @@ const NavbarMobile = () => {
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom d-flex  justify-content-around d-lg-none">
         <div class="container-fluid">
 
+        {
+          !localStorage.getItem("pwd")
+          ?
+          <GoogleLogin
+            clientId={clientId}
+            buttonText="Login with Google"
+            onSuccess={onSuccess}
+            onFailure={onFailure}
+            cookiePolicy={'single_host_origin'}
+            className='mx-auto w-100 text-center'
+          / > 
+                            :
+
           <ul class="nav nav-pills">
             <div>  <li class="nav-item">
               <a class="nav-link text-white" href="#"><i class="fa-2x fas fa-shopping-cart"></i></a>
@@ -85,6 +141,8 @@ const NavbarMobile = () => {
 
               </li></div>
           </ul>
+        }
+
         </div>
       </nav>
     </>
