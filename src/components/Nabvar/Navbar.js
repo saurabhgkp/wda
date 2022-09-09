@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
   const [token, setToken] = useState()
+  const navigate=useNavigate()
   const clientId = '274492401016-j54651qg7maf329cdddq6aavlbb5a35l.apps.googleusercontent.com'
 
   // function login () {
@@ -18,6 +19,7 @@ const Navbar = () => {
     console.log('logout')
     localStorage.removeItem("pwd")
     setToken()
+    navigate('/')
   }
 
 

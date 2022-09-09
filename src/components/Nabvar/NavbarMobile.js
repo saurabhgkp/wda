@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import { toast } from 'react-toastify';
@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 const NavbarMobile = () => {
 
   const [token, setToken] = useState()
-
+  const navigate=useNavigate()
   const clientId = '274492401016-j54651qg7maf329cdddq6aavlbb5a35l.apps.googleusercontent.com'
 
   // function login () {
@@ -21,6 +21,7 @@ const NavbarMobile = () => {
     console.log('logout')
     localStorage.removeItem("pwd")
     setToken()
+    navigate('/')
   }
 
 
@@ -108,12 +109,10 @@ const NavbarMobile = () => {
           </ul>
         </div>
       </nav>
-      <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom d-flex  justify-content-around d-lg-none">
-        <div class="container-fluid">
 
         {
           !localStorage.getItem("pwd")
-          ?
+          ?<nav class="navbar navbar-expand-lg  fixed-bottom d-flex  justify-content-around d-lg-none">
           <GoogleLogin
             clientId={clientId}
             buttonText="Login with Google"
@@ -121,8 +120,10 @@ const NavbarMobile = () => {
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
             className='mx-auto w-100 text-center'
-          / > 
+          / > </nav>
                             :
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom d-flex  justify-content-around d-lg-none">
+        <div class="container-fluid">
 
           <ul class="nav nav-pills">
             <div>  <li class="nav-item">
@@ -141,10 +142,10 @@ const NavbarMobile = () => {
 
               </li></div>
           </ul>
-        }
-
         </div>
       </nav>
+        }
+
     </>
   );
 };
