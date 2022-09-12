@@ -3,7 +3,7 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
+import { Helmet } from 'react-helmet-async'
 const Navbar = () => {
   const [token, setToken] = useState()
   const navigate=useNavigate()
@@ -47,6 +47,15 @@ const Navbar = () => {
 
 
   return (
+    <>  
+<Helmet>
+
+
+
+  
+</Helmet>
+
+
     <div
       style={{
         position: "sticky",
@@ -115,7 +124,7 @@ const Navbar = () => {
         </div>
 
       </div>
-    </div>
+    </div> </>
   );
 };
 
