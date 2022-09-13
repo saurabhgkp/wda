@@ -1,10 +1,15 @@
 import React from "react";
 import Product from "../Product/Product";
 import Review from "../../components/Review";
+import { Helmet } from 'react-helmet-async'
 
 const Hero = () => {
   return (
-    <div>
+    <>
+    <Helmet>
+    <title>Home Page</title>
+    <meta name="description" content="Buy high-quality computer pc and save money"/>
+    </Helmet>
       <div className="list-section pt-80 pb-80 ">
         <div className="container">
           <br />
@@ -90,7 +95,7 @@ const Hero = () => {
         </div>
       </section>
       <Review />
-    </div>
+    </>
   );
 };
 
