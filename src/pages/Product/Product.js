@@ -3,18 +3,28 @@ import { Link } from "react-router-dom";
 import React from "react";
 const Product = () => {
   const [data, setData] = React.useState("");
+  // const handelonUpdate = async (e) => {
+  //   console.log(data);
+  //   // e.preventDefault();
+
+  //   const res = await axios.put('http://localhost:4000/users/addItem', data, {
+  //     params: {
+  //       email: email
+  //     },
+  //   });
+  // }
   React.useEffect(() => {
-    fetch("https://pcology-api.herokuapp.com/googleSheet/getAllData")
+    fetch("http://localhost:4000/product/showAllProduct")
       .then((res) => res.json())
       .then((data) => {
-        //  console.log(data.Data);
-        setData(data.Data);
+
+        setData(data.data);
       });
   }, []);
-
+  console.log("========", data && data[0]._id);
   return (
     <div>
-      {" "}
+
       <div className="product-section mt-150 mb-150">
         <div className="container">
           <div className="row">
@@ -28,28 +38,42 @@ const Product = () => {
           </div>
 
           <div className="row">
-            {Object.keys(data).map((item, index) => {
+            {data && data.map((item, index) => {
               return (
                 <>
-                  {data[item].id ? (
+                  {item._id ? (
                     <div className="col-lg-4 col-md-6  offset-md-3 offset-lg-0 text-center">
                       <div className="single-product-item">
                         <div className="product-image">
-                          <img src={data[item].Image} alt="pc" />
+                          <img src={item.image} alt="pc" />
                         </div>
-                        <h3>{data[item].Name}</h3>
-                        <p className="">{data[item].Title} </p>
+                        <h3>{item.name}</h3>
+                        <p className="">{item.title} </p>
                         <h4 className="product-price">
-                          ₹{data[item].Price}{" "}
+                          ₹{item.price}{" "}
                           <del className="product-old-price">
-                            ₹{data[item].OldPrice}
+                            ₹{item.old_price}
                           </del>
                         </h4>
-                        <Link to={`SingleProduct/${data[item].id}`}>
+                        <Link to={`SingleProduct/${item._id}`}>
                           <a className="cart-btn">
                             <i className="fas fa-shopping-cart"></i> Shop Now
                           </a>
                         </Link>
+                        <div className=" row p-3"  >
+                          <div className="shopping-cart col ml" style={
+                            {
+                              color: "#F28123"
+                            }}>
+                            <a className="cart-btn"><i
+                              class=" fas fa-shopping-cart"></i> Add</a> </div>
+                          {/* <div className="shopping-cart col mr">
+                            <a className="cart-btn"
+                            >
+                              <i
+                                class=" fa fa-heart"></i>Favorite
+                            </a></div> */}
+                        </div>
                       </div>
                     </div>
                   ) : (

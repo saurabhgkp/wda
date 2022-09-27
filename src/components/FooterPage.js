@@ -39,7 +39,7 @@ const FooterPage = () => {
                     <Link to="/About">About</Link>
                   </li>
                   <li>
-                    <Link to="/">Shop</Link>
+                    <Link to="/User">Shop</Link>
                   </li>
 
                   <li>
