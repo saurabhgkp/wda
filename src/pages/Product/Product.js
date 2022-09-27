@@ -13,7 +13,6 @@ const Product = () => {
   //     },
   //   });
   // }
-  ////
   React.useEffect(() => {
     fetch("http://localhost:4000/product/showAllProduct")
       .then((res) => res.json())
