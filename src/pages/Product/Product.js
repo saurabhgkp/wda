@@ -1,26 +1,26 @@
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 import React from "react";
 const Product = () => {
   const [data, setData] = React.useState("");
   const [item, setItem] = React.useState("");
-  // const handelonUpdate = async (e) => {
-  //   console.log(data);
-  //   // e.preventDefault();
 
-  //   const res = await axios.put('http://localhost:4000/users/addItem', data, {
-  //    {
-  //       email: email,
-  // itemid:item,
-  //     },
-  //   });
-  // }
-
-  const additemfn = (e) => {
+  const additemfn = async (e) => {
+    // e.preventDefault();
     setItem(e);
+
+    var token = localStorage.getItem("pwd");
+    console.log(item, token, "=====SAs======fsd=======ad=========");
+    await axios({
+      method: "put",
+      url: "http://localhost:4000/users/addItem",
+      data: {
+        email: token,
+        item,
+      },
+    });
   };
 
-  console.log(item, "====================fsfd=============");
   React.useEffect(() => {
     fetch("http://localhost:4000/product/showAllProduct")
       .then((res) => res.json())
