@@ -40,8 +40,8 @@ const Product = () => {
                                         </div>
                                         <h3>{data[item].Name}</h3>
                                         <p class="product-price">{data[item].Title} </p>
-                                        <h4 class="product-price">₹{data[item].Price} <del
-                                            class="product-old-price">₹{data[item].OldPrice}</del></h4>
+                                        <p class="product-price">₹{data[item].Price} <del
+                                            class="product-old-price">₹{data[item].OldPrice}</del></p>
                                         <Link to={`SingleProduct/${data[item].id}`}>
                                             <a class="cart-btn"><i class="fas fa-shopping-cart"></i> Shop Now</a></Link>
                                     </div>
