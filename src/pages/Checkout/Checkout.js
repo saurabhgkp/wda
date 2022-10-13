@@ -18,13 +18,13 @@ const Checkout = () => {
     zip: "",
   });
 
-  const [error,setError] = useState({
-    name:"",
-    email:"",
-    number:"",
-    zip:"",
-    address:""
-  })
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    number: "",
+    zip: "",
+    address: "",
+  });
 
   const getdata = async () => {
     const res = await fetch(
@@ -55,59 +55,46 @@ const Checkout = () => {
     setFromData({ ...fromData, [e.target.name]: e.target.value });
   };
 
-  const validateForm = ()=>{
-
-    if(!fromData?.name || !fromData?.email || !fromData?.zip || !fromData?.address.length==0 || fromData?.number.length==0){
-      toast.error("All Fields are mandatory!!")
+  const validateForm = () => {
+    if (
+      !fromData?.name ||
+      !fromData?.email ||
+      !fromData?.zip ||
+      !fromData?.address.length == 0 ||
+      fromData?.number.length == 0
+    ) {
+      toast.error("All Fields are mandatory!!");
+    } else if (!validator.isEmail(fromData?.email)) {
+      toast.error("Invalid email");
+    } else if (!validator.isMobilePhone(fromData?.number)) {
+      toast.error("Invalid phone");
+    } else {
+      console.log("Submit");
+      handelonSubmit();
     }
-    else if(!validator.isEmail(fromData?.email)){
-      toast.error('Invalid email')
-    }
-    else if(!validator.isMobilePhone(fromData?.number)){
-      toast.error('Invalid phone')
-    }
-    else{
-      console.log("Submit")
-      handelonSubmit()
-    }
-
-  }
+  };
 
   // console.log(fromData);
 
   const handelonSubmit = async (e) => {
-    
-    let goData = {
-      B: fromData.name,
-      C: fromData.number,
-      D: fromData.address,
-      E: fromData.email,
-      F: fromData.zip,
-
-      G: pcname,
-      H: price,
-    };
-
     const response = await axios.post(
       "https://pcology-api.herokuapp.com/orders/Adddata",
-      goData
+      fromData
     );
     console.log(response);
-    if(response.status==200){
-
+    if (response.status == 200) {
       setFromData({
         name: "",
         email: "",
         number: "",
         address: "",
         zip: "",
-      })
+      });
 
-      setData({ })
-      toast.success("ruko zara sabr karo")
+      setData({});
+      toast.success("ruko zara sabr karo");
       navigate("/");
     }
-
   };
 
   return (
@@ -290,7 +277,9 @@ const Checkout = () => {
                                 onChange={handelChange}
                                 value={data.name}
                               />
-                              {error.name && <div className="text-danger">Required</div>}
+                              {error.name && (
+                                <div className="text-danger">Required</div>
+                              )}
                             </p>
                             <p>
                               <input
@@ -302,7 +291,9 @@ const Checkout = () => {
                                 value={data.email}
                               />
                               {/* {console.log(error.email)} */}
-                              {error.email && <div className="text-danger">Required</div>}
+                              {error.email && (
+                                <div className="text-danger">Required</div>
+                              )}
                             </p>
                             <p>
                               <input
@@ -313,7 +304,9 @@ const Checkout = () => {
                                 onChange={handelChange}
                                 value={data.number}
                               />
-                              {error.number && <div className="text-danger">Required</div>}
+                              {error.number && (
+                                <div className="text-danger">Required</div>
+                              )}
                             </p>
                             <p>
                               <input
@@ -324,7 +317,9 @@ const Checkout = () => {
                                 onChange={handelChange}
                                 value={data.zip}
                               />
-                              {error.zip && <div className="text-danger">Required</div>}
+                              {error.zip && (
+                                <div className="text-danger">Required</div>
+                              )}
                             </p>
                             <p>
                               <textarea
@@ -337,7 +332,9 @@ const Checkout = () => {
                                 onChange={handelChange}
                                 value={data.addres}
                               ></textarea>
-                              {error.address && <div className="text-danger">Required</div>}
+                              {error.address && (
+                                <div className="text-danger">Required</div>
+                              )}
                             </p>
                           </form>
                         </div>
