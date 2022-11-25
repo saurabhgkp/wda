@@ -43,22 +43,8 @@ const MainRouter = () => {
             <Navbar />
             <NavbarMobile />
             <Routes>
-                <Route>
-                    <Route path="/" element={<Hero />} />
-                    {/* <Route path="/" element={<Product />} /> */}
-                    <Route element={<Review />} />
-                </Route>
-                <Route path="/SingleProduct/:id" element={<SingleProduct />} />
-                <Route>
-                    <Route path="/About" element={<About />} />
-                    <Route element={<Review />} />
-                </Route>
-                <Route path="/Cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
-                <Route path="/Checkout/:id" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
-                <Route path="/Contact" element={<Contact />} />
-                <Route path="/User" element={<ProtectedRoute><Deshboard /></ProtectedRoute>} />
-                <Route path="/Login" element={<Login />} />
-            </Routes>
+             
+            </Routes>  
 
             {/* <Discount /> */}
 

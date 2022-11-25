@@ -77,7 +77,7 @@ const Navbar = () => {
                 <div className="main-menu-wrap">
                   <div className="site-logo">
                     <Link to="/">
-                      <img src="assets/img/pcology1.png" alt="pcology" />
+                      {/* <img src="assets/img/pcology1.png" alt="pcology" /> */}
                     </Link>
                   </div>
 
@@ -87,6 +87,21 @@ const Navbar = () => {
                         <Link to="/">
                           <i class=" fa fa-home x-3"></i>
                         </Link>
+                      </li>
+                      <li>
+                        <Link to="/About">About</Link>
+                      </li>
+                      <li>
+                        <Link to="/About">About</Link>
+                      </li>
+                      <li>
+                        <Link to="/About">About</Link>
+                      </li>
+                      <li>
+                        <Link to="/About">About</Link>
+                      </li>
+                      <li>
+                        <Link to="/About">About</Link>
                       </li>
                       <li>
                         <Link to="/About">About</Link>
