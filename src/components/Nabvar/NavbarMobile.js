@@ -71,7 +71,7 @@ const NavbarMobile = () => {
         }}
       >
         <Link className="navbar-brand" to="/">
-          <img src="assets/img/pcology1.png" alt="PCOLOGY" />
+          <img src="" alt="logog" />
         </Link>
         <button
           className="navbar-toggler"
@@ -94,6 +94,41 @@ const NavbarMobile = () => {
             <li className="nav-item">
               <Link className="nav-link " to="/About">
                 About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Contact">
+                Contact
               </Link>
             </li>
             <li className="nav-item">
