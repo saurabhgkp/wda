@@ -13,7 +13,7 @@ const SingleProduct = () => {
 
   const getdata = async () => {
     const res = await fetch(
-      `https://pcology-api.herokuapp.com/googleSheet/getDataById/${id}`,
+      `https://pcology.onrender.com/googleSheet/getDataById/${id}`,
       {
         method: "GET",
         headers: {

@@ -18,17 +18,17 @@ const Checkout = () => {
     zip: "",
   });
 
-  const [error,setError] = useState({
-    name:"",
-    email:"",
-    number:"",
-    zip:"",
-    address:""
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    number: "",
+    zip: "",
+    address: ""
   })
 
   const getdata = async () => {
     const res = await fetch(
-      `https://pcology-api.herokuapp.com/googleSheet/getDataById/${id}`,
+      `https://pcology.onrender.com/googleSheet/getDataById/${id}`,
       {
         method: "GET",
         headers: {
@@ -55,18 +55,18 @@ const Checkout = () => {
     setFromData({ ...fromData, [e.target.name]: e.target.value });
   };
 
-  const validateForm = ()=>{
+  const validateForm = () => {
 
-    if(!fromData?.name || !fromData?.email || !fromData?.zip || !fromData?.address.length==0 || fromData?.number.length==0){
+    if (!fromData?.name || !fromData?.email || !fromData?.zip || !fromData?.address.length == 0 || fromData?.number.length == 0) {
       toast.error("All Fields are mandatory!!")
     }
-    else if(!validator.isEmail(fromData?.email)){
+    else if (!validator.isEmail(fromData?.email)) {
       toast.error('Invalid email')
     }
-    else if(!validator.isMobilePhone(fromData?.number)){
+    else if (!validator.isMobilePhone(fromData?.number)) {
       toast.error('Invalid phone')
     }
-    else{
+    else {
       console.log("Submit")
       handelonSubmit()
     }
@@ -76,7 +76,7 @@ const Checkout = () => {
   // console.log(fromData);
 
   const handelonSubmit = async (e) => {
-    
+
     let goData = {
       B: fromData.name,
       C: fromData.number,
@@ -93,7 +93,7 @@ const Checkout = () => {
       goData
     );
     console.log(response);
-    if(response.status==200){
+    if (response.status == 200) {
 
       setFromData({
         name: "",
@@ -103,7 +103,7 @@ const Checkout = () => {
         zip: "",
       })
 
-      setData({ })
+      setData({})
       toast.success("ruko zara sabr karo")
       navigate("/");
     }
