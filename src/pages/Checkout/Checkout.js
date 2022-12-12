@@ -89,7 +89,7 @@ const Checkout = () => {
     };
 
     const response = await axios.post(
-      "https://pcology-api.herokuapp.com/orders/Adddata",
+      "https://pcology.onrender.com/orders/Adddata",
       goData
     );
     console.log(response);

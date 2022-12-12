@@ -20,15 +20,15 @@ const Product = () => {
     setItem(e);
   };
 
-  console.log(item, "====================fsfd=============");
+
   React.useEffect(() => {
-    fetch("http://localhost:4000/product/showAllProduct")
+    fetch("https://pcology.onrender.com/googleSheet/getAllData")
       .then((res) => res.json())
       .then((data) => {
-        setData(data.data);
+        setData(data.Data);
       });
   }, []);
-  console.log("========", data && data[0]._id);
+  console.log("========", data);
   return (
     <div>
       <div className="product-section mt-150 mb-150">
@@ -48,26 +48,27 @@ const Product = () => {
               data.map((item, index) => {
                 return (
                   <>
-                    {item._id ? (
+                    {item.id ? (
                       <div className="col-lg-4 col-md-6  offset-md-3 offset-lg-0 text-center">
                         <div className="single-product-item">
                           <div className="product-image">
-                            <img src={item.image} alt="pc" />
+                            <img src={item.Image} alt="pc" />
                           </div>
-                          <h3>{item.name}</h3>
-                          <p className="">{item.title} </p>
+
+                          <h3>{item.Name}</h3>
+                          <p className="">{item.Title} </p>
                           <h4 className="product-price">
-                            ₹{item.price}{" "}
+                            ₹{item.Price}{" "}
                             <del className="product-old-price">
-                              ₹{item.old_price}
+                              ₹{item.OldPrice}
                             </del>
                           </h4>
-                          <Link to={`SingleProduct/${item._id}`}>
+                          <Link to={`SingleProduct/${item.id}`}>
                             <a className="cart-btn">
                               <i className="fas fa-shopping-cart"></i> Shop Now
                             </a>
                           </Link>
-                          <div className=" row p-3">
+                          {/* <div className=" row p-3">
                             <div
                               className="shopping-cart col ml"
                               style={{
@@ -80,13 +81,13 @@ const Product = () => {
                                 </a>{" "}
                               </div>
                             </div>
-                            {/* <div className="shopping-cart col mr">
+                             <div className="shopping-cart col mr">
                             <a className="cart-btn"
                             >
                               <i
                                 class=" fa fa-heart"></i>Favorite
-                            </a></div> */}
-                          </div>
+                            </a></div> 
+                          </div>*/}
                         </div>
                       </div>
                     ) : (

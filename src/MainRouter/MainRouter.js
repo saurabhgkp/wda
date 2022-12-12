@@ -17,6 +17,7 @@ import { ToastContainer } from "react-toastify";
 import Deshboard from '../pages/User/Deshboard';
 import Login from '../pages/Login/Login';
 import ProtectedRoute from './ProtectedRoute';
+import Product from '../pages/Product/Product';
 const MainRouter = () => {
 
     const [islogin, setIslogin] = useState('')
@@ -45,7 +46,7 @@ const MainRouter = () => {
             <Routes>
                 <Route>
                     <Route path="/" element={<Hero />} />
-                    {/* <Route path="/" element={<Product />} /> */}
+                    <Route path="/" element={<Product />} />
                     <Route element={<Review />} />
                 </Route>
                 <Route path="/SingleProduct/:id" element={<SingleProduct />} />

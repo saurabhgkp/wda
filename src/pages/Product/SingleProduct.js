@@ -64,7 +64,7 @@ const SingleProduct = () => {
                   </a>
 
                   <h3>{data.Name}</h3>
-                  <p className="product-price">{data.Title} </p>
+                  <p className="">{data.Title} </p>
                   <h4 className="product-price">
                     ₹{data.Price}{" "}
                     <del className="product-old-price">₹{data.OldPrice}</del>
@@ -74,7 +74,7 @@ const SingleProduct = () => {
                       <i className="fas fa-shopping-cart"></i>Shop Now
                     </a>
                   </Link>
-                  <div className=" row p-3"  >
+                  {/* <div className=" row p-3"  >
                     <div className="shopping-cart col ml" style={
                       {
                         color: "#F28123"
@@ -85,8 +85,8 @@ const SingleProduct = () => {
                       >
                         <i
                           class=" fa fa-heart"></i> Favorite
-                        {/* <i class="fa fa-heart-o" ></i>*/}</a></div>
-                  </div>
+                        {/* <i class="fa fa-heart-o" ></i></a></div>
+            </div> */}
                 </div>
               </div>
             </div>
@@ -161,8 +161,8 @@ const SingleProduct = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
 
       <div className="more-products mb-150">
         <div className="container">
@@ -181,7 +181,7 @@ const SingleProduct = () => {
                 <div className="product-image">
                   <a href="/">
                     <img
-                      src="assets/img/products/product-img-1.jpg"
+                      src={data.Image}
                       alt="product-img"
                     />
                   </a>
@@ -200,7 +200,7 @@ const SingleProduct = () => {
                 <div className="product-image">
                   <a href="/">
                     <img
-                      src="assets/img/products/product-img-2.jpg"
+                      src={data.Image}
                       alt="product-img"
                     />
                   </a>
@@ -219,7 +219,7 @@ const SingleProduct = () => {
                 <div className="product-image">
                   <a href="/">
                     <img
-                      src="assets/img/products/product-img-3.jpg"
+                      src={data.Image}
                       alt="product-img"
                     />
                   </a>
@@ -236,7 +236,7 @@ const SingleProduct = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
