@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import { toast } from 'react-toastify';
@@ -8,8 +8,8 @@ import { toast } from 'react-toastify';
 const NavbarMobile = () => {
 
   const [token, setToken] = useState()
-  const navigate=useNavigate()
-  const clientId = '274492401016-j54651qg7maf329cdddq6aavlbb5a35l.apps.googleusercontent.com'
+  const navigate = useNavigate()
+  // const clientId = '274492401016-j54651qg7maf329cdddq6aavlbb5a35l.apps.googleusercontent.com'
 
   // function login () {
   //   var token = "gsgggsfgh";
@@ -17,47 +17,47 @@ const NavbarMobile = () => {
   //   setToken(token)
   //   console.log(token);
   // }
-  function logout() {
-    console.log('logout')
-    localStorage.removeItem("pwd")
-    setToken()
-    navigate('/')
-  }
+  // function logout() {
+  //   console.log('logout')
+  //   localStorage.removeItem("pwd")
+  //   setToken()
+  //   navigate('/')
+  // }
 
 
-  useEffect(() => {
-    const initClient = () => {
-      gapi.client.init({
-        clientId: clientId,
-        scope: ''
-      });
-    };
-    gapi.load('client:auth2', initClient);
-  });
+  // useEffect(() => {
+  //   const initClient = () => {
+  //     gapi.client.init({
+  //       clientId: clientId,
+  //       scope: ''
+  //     });
+  //   };
+  //   gapi.load('client:auth2', initClient);
+  // });
 
-  const onFailure = (response) => {
-    console.log(response);
-    if(response?.error!=='popup_closed_by_user')
-    toast.error("Might be an issue!! please try again later")
-  }
+  // const onFailure = (response) => {
+  //   console.log(response);
+  //   if(response?.error!=='popup_closed_by_user')
+  //   toast.error("Might be an issue!! please try again later")
+  // }
 
-  const onSuccess = (res) => {
-    console.log(res?.accessToken);
-    localStorage.setItem('pwd', res?.accessToken)
-    setToken(res?.accessToken)
-  }
+  // const onSuccess = (res) => {
+  //   console.log(res?.accessToken);
+  //   localStorage.setItem('pwd', res?.accessToken)
+  //   setToken(res?.accessToken)
+  // }
 
 
-  function login() {
-    var token = "gsgggsfgh";
-    localStorage.setItem("pwd", token)
-    setToken(token)
-    console.log(token);
-  }
-  function logout() {
-    localStorage.removeItem("pwd")
-    setToken('')
-  }
+  // function login() {
+  //   var token = "gsgggsfgh";
+  //   localStorage.setItem("pwd", token)
+  //   setToken(token)
+  //   console.log(token);
+  // }
+  // function logout() {
+  //   localStorage.removeItem("pwd")
+  //   setToken('')
+  // }
 
   return (
     <>
@@ -102,7 +102,7 @@ const NavbarMobile = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/User">
+              <Link className="nav-link" to="/">
                 Shop
               </Link>
             </li>
@@ -110,7 +110,7 @@ const NavbarMobile = () => {
         </div>
       </nav>
 
-        {
+      {/* {
           !localStorage.getItem("pwd")
           ?<nav class="navbar navbar-expand-lg  fixed-bottom d-flex  justify-content-around d-lg-none">
           <GoogleLogin
@@ -144,7 +144,7 @@ const NavbarMobile = () => {
           </ul>
         </div>
       </nav>
-        }
+        } */}
 
     </>
   );

@@ -10,49 +10,49 @@ const Navbar = () => {
   const clientId =
     "274492401016-j54651qg7maf329cdddq6aavlbb5a35l.apps.googleusercontent.com";
 
-  function logout() {
-    console.log("logout");
-    localStorage.removeItem("pwd");
-    navigate("/");
-  }
+  // function logout() {
+  //   console.log("logout");
+  //   localStorage.removeItem("pwd");
+  //   navigate("/");
+  // }
 
-  useEffect(() => {
-    const initClient = () => {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    };
-    gapi.load("client:auth2", initClient);
-  }, []);
+  // useEffect(() => {
+  //   const initClient = () => {
+  //     gapi.client.init({
+  //       clientId: clientId,
+  //       scope: "",
+  //     });
+  //   };
+  //   gapi.load("client:auth2", initClient);
+  // }, []);
 
-  useEffect(() => {
-    const initClient = () => {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    };
-    gapi.load("client:auth2", initClient);
-  }, []);
+  // useEffect(() => {
+  //   const initClient = () => {
+  //     gapi.client.init({
+  //       clientId: clientId,
+  //       scope: "",
+  //     });
+  //   };
+  //   gapi.load("client:auth2", initClient);
+  // }, []);
 
-  const onFailure = (response) => {
-    console.log(response);
-    if (response?.error !== "popup_closed_by_user")
-      toast.error("Might be an issue!! please try again later");
-  };
+  // const onFailure = (response) => {
+  //   console.log(response);
+  //   if (response?.error !== "popup_closed_by_user")
+  //     toast.error("Might be an issue!! please try again later");
+  // };
 
-  const onSuccess = async (res) => {
-    const { email, name } = res?.profileObj;
-    localStorage.setItem("pwd", email);
+  // const onSuccess = async (res) => {
+  //   const { email, name } = res?.profileObj;
+  //   localStorage.setItem("pwd", email);
 
-    if (email) {
-      const data = await axios.post("http://localhost:4000/users/register", {
-        email,
-        name,
-      });
-    }
-  };
+  // if (email) {
+  //   const data = await axios.post("http://localhost:4000/users/register", {
+  //     email,
+  //     name,
+  //   });
+  // }
+  // };
 
   return (
     <>
@@ -95,7 +95,7 @@ const Navbar = () => {
                         <Link to="/Contact">Contact</Link>
                       </li>
                       <li>
-                        <Link to="/User">Shop</Link>
+                        <Link to="/">Shop</Link>
                       </li>
 
                       <li>
@@ -104,7 +104,7 @@ const Navbar = () => {
                           <div class="header-icons p-3">
                             <li>
                               {/* {console.log(token)} */}
-                              {!localStorage.getItem("pwd") ? (
+                              {/* {!localStorage.getItem("pwd") ? (
                                 <GoogleLogin
                                   clientId={clientId}
                                   buttonText=""
@@ -128,7 +128,7 @@ const Navbar = () => {
                                     <h6>Logout</h6>
                                   </GoogleLogout>
                                 </div>
-                              )}
+                              )} */}
                             </li>
                           </div>
                         </li>

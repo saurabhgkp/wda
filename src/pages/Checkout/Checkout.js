@@ -83,7 +83,6 @@ const Checkout = () => {
       D: fromData.address,
       E: fromData.email,
       F: fromData.zip,
-
       G: pcname,
       H: price,
     };
